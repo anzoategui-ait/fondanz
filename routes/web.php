@@ -26,3 +26,7 @@ Route::resource('bancos', App\Http\Controllers\BancoController::class);
 Route::resource('cuentas', App\Http\Controllers\CuentaController::class);
 
 Route::resource('ejercicios', App\Http\Controllers\EjercicioController::class);
+
+Route::resource('proyectos', App\Http\Controllers\ProyectoController::class);
+
+Route::resource('subproyectos', App\Http\Controllers\SubproyectoController::class);

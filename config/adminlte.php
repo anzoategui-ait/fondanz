@@ -339,6 +339,21 @@ return [
             'route'  => 'ejercicios.index',
             'icon' => 'fas fa-fw fa-user',
         ],
+        //PROYECTOS
+        [
+            'text'    => 'Proyectos',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Gestionar Proyectos',
+                    'route'  => 'proyectos.index',
+                ],
+                [
+                    'text' => 'Detalles Proyectos',
+                    'route'  => 'subproyectos.index',
+                ],
+            ],
+        ],
         
         //FIN ADMINISTRACION
         [
