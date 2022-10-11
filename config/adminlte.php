@@ -324,24 +324,23 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Agregar Banco',
+                    'text' => 'Gestionar Banco',
                     'route'  => 'bancos.index',
                 ],
                 [
-                    'text' => 'Agregar Cuenta',
+                    'text' => 'Gestionar Cuentas',
                     'route'  => 'cuentas.index',
                 ],
             ],
         ],
-
-
-
-        //FIN ADMINISTRACION
+        //Ejercicio
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Ejercio Fiscal',
+            'route'  => 'ejercicios.index',
             'icon' => 'fas fa-fw fa-user',
         ],
+        
+        //FIN ADMINISTRACION
         [
             'text' => 'change_password',
             'url'  => 'admin/settings',

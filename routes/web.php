@@ -24,3 +24,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('bancos', App\Http\Controllers\BancoController::class);
 
 Route::resource('cuentas', App\Http\Controllers\CuentaController::class);
+
+Route::resource('ejercicios', App\Http\Controllers\EjercicioController::class);
