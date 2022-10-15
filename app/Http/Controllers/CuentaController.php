@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cuenta;
+use App\Models\Banco;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class CuentaController extends Controller
     public function create()
     {
         $cuenta = new Cuenta();
-        return view('cuenta.create', compact('cuenta'));
+        $bancos = Banco::pluck('nombre','id');
+        return view('cuenta.create', compact('cuenta','bancos'));
     }
 
     /**
@@ -73,8 +75,9 @@ class CuentaController extends Controller
     public function edit($id)
     {
         $cuenta = Cuenta::find($id);
+        $bancos = Banco::pluck('nombre','id');
 
-        return view('cuenta.edit', compact('cuenta'));
+        return view('cuenta.edit', compact('cuenta','bancos'));
     }
 
     /**

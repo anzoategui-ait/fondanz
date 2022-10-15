@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Cuenta') }}
+                                {{ __('Cuentas Bancarias') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('cuentas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Nueva Cuenta') }}
                                 </a>
                               </div>
                         </div>
@@ -36,10 +36,10 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Numero Cuenta</th>
-										<th>Banco Id</th>
+										<th>Numero de Cuenta</th>
+										<th>Nombre del Banco</th>
 
-                                        <th></th>
+                                        <th>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -48,15 +48,15 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $cuenta->numero_cuenta }}</td>
-											<td>{{ $cuenta->banco_id }}</td>
+											<td>{{ $cuenta->banco->nombre }}</td>
 
                                             <td>
                                                 <form action="{{ route('cuentas.destroy',$cuenta->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('cuentas.show',$cuenta->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('cuentas.edit',$cuenta->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('cuentas.show',$cuenta->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('cuentas.edit',$cuenta->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

@@ -19,14 +19,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 
-Route::resource('bancos', App\Http\Controllers\BancoController::class);
+Route::resource('bancos', App\Http\Controllers\BancoController::class)->middleware('auth');
 
-Route::resource('cuentas', App\Http\Controllers\CuentaController::class);
+Route::resource('cuentas', App\Http\Controllers\CuentaController::class)->middleware('auth');
 
-Route::resource('ejercicios', App\Http\Controllers\EjercicioController::class);
+Route::resource('ejercicios', App\Http\Controllers\EjercicioController::class)->middleware('auth');
 
-Route::resource('proyectos', App\Http\Controllers\ProyectoController::class);
+Route::resource('proyectos', App\Http\Controllers\ProyectoController::class)->middleware('auth');
 
-Route::resource('subproyectos', App\Http\Controllers\SubproyectoController::class);
+Route::resource('subproyectos', App\Http\Controllers\SubproyectoController::class)->middleware('auth');

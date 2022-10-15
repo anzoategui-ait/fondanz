@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Ejercicio') }}
+                                {{ __('Ejercicio Fiscales') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('ejercicios.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Nuevo Ejercicio Fiscal') }}
                                 </a>
                               </div>
                         </div>
@@ -36,11 +36,11 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Ejercicio Year</th>
-										<th>Ejercicio Unidad Tributaria</th>
-										<th>Ejercicio Unidad Minima</th>
-										<th>Ejercicio Unidad Maxima</th>
-										<th>Ejercicio Cierre</th>
+										<th>Ejercicio</th>
+										<th>Valor de Unidad Tributaria</th>
+										<th>Se declara desde UT</th>
+										<th>Se declara hasta UT</th>
+										<th>Fecha de Cierre</th>
 
                                         <th></th>
                                     </tr>
@@ -58,11 +58,11 @@
 
                                             <td>
                                                 <form action="{{ route('ejercicios.destroy',$ejercicio->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('ejercicios.show',$ejercicio->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('ejercicios.edit',$ejercicio->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('ejercicios.show',$ejercicio->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('ejercicios.edit',$ejercicio->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

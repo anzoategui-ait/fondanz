@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Subproyecto;
+use App\Models\Proyecto;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,8 @@ class SubproyectoController extends Controller
     public function create()
     {
         $subproyecto = new Subproyecto();
-        return view('subproyecto.create', compact('subproyecto'));
+        $proyectos = Proyecto::pluck('proyecto_nombre','id');
+        return view('subproyecto.create', compact('subproyecto', 'proyectos'));
     }
 
     /**
@@ -73,8 +75,9 @@ class SubproyectoController extends Controller
     public function edit($id)
     {
         $subproyecto = Subproyecto::find($id);
+        $proyectos = Proyecto::pluck('proyecto_nombre','id');
 
-        return view('subproyecto.edit', compact('subproyecto'));
+        return view('subproyecto.edit', compact('subproyecto', 'proyectos'));
     }
 
     /**
