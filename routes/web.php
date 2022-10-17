@@ -36,3 +36,7 @@ Route::resource('sectores', App\Http\Controllers\SectoreController::class)->midd
 Route::resource('subsectores', App\Http\Controllers\SubsectoreController::class)->middleware('auth');
 
 Route::resource('actividades', App\Http\Controllers\ActividadeController::class)->middleware('auth');
+
+Route::resource('municipios', App\Http\Controllers\MunicipioController::class)->middleware('auth');
+
+Route::resource('parroquias', App\Http\Controllers\ParroquiaController::class)->middleware('auth');

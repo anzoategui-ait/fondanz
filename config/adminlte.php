@@ -363,6 +363,21 @@ return [
                 ],
             ],
         ],
+        //MUNICIPIOS Y PARROQUIAS
+        [
+            'text'    => 'Municipios',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Municipio',
+                    'route'  => 'municipios.index',
+                ],
+                [
+                    'text' => 'Parroquia',
+                    'route'  => 'parroquias.index',
+                ],
+            ],
+        ],
 
         
         //FIN ADMINISTRACION
