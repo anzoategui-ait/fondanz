@@ -383,6 +383,13 @@ return [
             ],
         ],
 
+        //TIPO DE EMPRESA
+        [
+            'text' => 'Tipo de Empresa',
+            'route'  => 'tipoempresas.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
         
         //FIN ADMINISTRACION
     

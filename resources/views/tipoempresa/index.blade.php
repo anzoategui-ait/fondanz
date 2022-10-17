@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Codigospostale
+    Tipoempresa
 @endsection
 
 @section('content')
@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Codigos Postales') }}
+                                {{ __('Tipo de empresas') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('codigospostales.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Crear Nuevo Codigo Postal') }}
+                                <a href="{{ route('tipoempresas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                  {{ __('Crear Nuevo Tipo de Empresa') }}
                                 </a>
                               </div>
                         </div>
@@ -36,24 +36,24 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Codigo</th>
-										<th>Zona</th>
+										<th>Tipo de empresa</th>
+										<th>Codigo de empresa</th>
 
                                         <th>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($codigospostales as $codigospostale)
+                                    @foreach ($tipoempresas as $tipoempresa)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $codigospostale->codigo }}</td>
-											<td>{{ $codigospostale->zona }}</td>
+											<td>{{ $tipoempresa->tipoempresa }}</td>
+											<td>{{ $tipoempresa->codigoempresa }}</td>
 
                                             <td>
-                                                <form action="{{ route('codigospostales.destroy',$codigospostale->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('codigospostales.show',$codigospostale->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('codigospostales.edit',$codigospostale->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('tipoempresas.destroy',$tipoempresa->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('tipoempresas.show',$tipoempresa->id) }}"><i class="fa fa-fw fa-eye"></i> Ver</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('tipoempresas.edit',$tipoempresa->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $codigospostales->links() !!}
+                {!! $tipoempresas->links() !!}
             </div>
         </div>
     </div>
