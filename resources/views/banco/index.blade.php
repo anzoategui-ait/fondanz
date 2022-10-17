@@ -38,7 +38,7 @@
                                         
 										<th>Nombre del Banco</th>
 
-                                        <th></th>
+                                        <th>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>

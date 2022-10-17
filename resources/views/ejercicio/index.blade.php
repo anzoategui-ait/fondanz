@@ -42,7 +42,7 @@
 										<th>Se declara hasta UT</th>
 										<th>Fecha de Cierre</th>
 
-                                        <th></th>
+                                        <th>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>

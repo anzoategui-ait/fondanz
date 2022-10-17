@@ -38,7 +38,7 @@
                                         
 										<th>Nombre del Tipo de Proyecto</th>
 
-                                        <th></th>
+                                        <th>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -30,3 +30,9 @@ Route::resource('ejercicios', App\Http\Controllers\EjercicioController::class)->
 Route::resource('proyectos', App\Http\Controllers\ProyectoController::class)->middleware('auth');
 
 Route::resource('subproyectos', App\Http\Controllers\SubproyectoController::class)->middleware('auth');
+
+Route::resource('sectores', App\Http\Controllers\SectoreController::class)->middleware('auth');
+
+Route::resource('subsectores', App\Http\Controllers\SubsectoreController::class)->middleware('auth');
+
+Route::resource('actividades', App\Http\Controllers\ActividadeController::class)->middleware('auth');

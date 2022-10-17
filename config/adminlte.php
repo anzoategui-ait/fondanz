@@ -344,6 +344,26 @@ return [
                 ],
             ],
         ],
+        //SECTORES, SUBSECTOR Y ACTIVIDAD
+        [
+            'text'    => 'Sectores',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Sector',
+                    'route'  => 'sectores.index',
+                ],
+                [
+                    'text' => 'Sub Sector',
+                    'route'  => 'subsectores.index',
+                ],
+                [
+                    'text' => 'Actividad',
+                    'route'  => 'actividades.index',
+                ],
+            ],
+        ],
+
         
         //FIN ADMINISTRACION
     
