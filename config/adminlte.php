@@ -376,6 +376,10 @@ return [
                     'text' => 'Parroquia',
                     'route'  => 'parroquias.index',
                 ],
+                [
+                    'text' => 'Codigo Postal',
+                    'route'  => 'codigospostales.index',
+                ],
             ],
         ],
 

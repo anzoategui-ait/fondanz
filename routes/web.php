@@ -40,3 +40,5 @@ Route::resource('actividades', App\Http\Controllers\ActividadeController::class)
 Route::resource('municipios', App\Http\Controllers\MunicipioController::class)->middleware('auth');
 
 Route::resource('parroquias', App\Http\Controllers\ParroquiaController::class)->middleware('auth');
+
+Route::resource('codigospostales', App\Http\Controllers\CodigospostaleController::class)->middleware('auth');
