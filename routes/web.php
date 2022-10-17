@@ -44,3 +44,5 @@ Route::resource('parroquias', App\Http\Controllers\ParroquiaController::class)->
 Route::resource('codigospostales', App\Http\Controllers\CodigospostaleController::class)->middleware('auth');
 
 Route::resource('tipoempresas', App\Http\Controllers\TipoempresaController::class)->middleware('auth');
+
+Route::resource('tipodeclaraciones', App\Http\Controllers\TipodeclaracioneController::class)->middleware('auth');

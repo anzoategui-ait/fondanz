@@ -382,11 +382,16 @@ return [
                 ],
             ],
         ],
-
         //TIPO DE EMPRESA
         [
             'text' => 'Tipo de Empresa',
             'route'  => 'tipoempresas.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+         //TIPO DE DECLARACION
+         [
+            'text' => 'Tipo de Declaracion',
+            'route'  => 'tipodeclaraciones.index',
             'icon' => 'fas fa-fw fa-user',
         ],
 
